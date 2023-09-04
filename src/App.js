@@ -3,6 +3,7 @@ export default function App() {
     <div className="App">
       <Dimensions />
       <Factors />
+      <Input />
       <Numpad />
     </div>
   );
@@ -12,12 +13,23 @@ function Dimensions() {
   return (
     <div className="dimensions">
       <ul className="dimension-list">
-        <li>Length</li>
-        <li>Time</li>
-        <li>Mass</li>
+        <li>
+          <Dimension />
+        </li>
+        <li>
+          <Dimension />
+        </li>
+        <li>
+          <Dimension />
+        </li>
+        <li>+ Add Dimension</li>
       </ul>
     </div>
   );
+}
+
+function Dimension() {
+  return <div className="dimension">Length</div>;
 }
 
 function Factors() {
@@ -67,6 +79,15 @@ function AddFactor() {
       <label>
         <h3>+ Add Unit</h3>
       </label>
+    </div>
+  );
+}
+
+function Input() {
+  return (
+    <div className="input-field">
+      <h3>meter</h3>
+      <input type="number" name="" id="" />
     </div>
   );
 }
