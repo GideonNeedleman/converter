@@ -1,4 +1,21 @@
 export default function App() {
+  const dimensions = [
+    {
+      name: "length",
+      factors: [
+        { name: "meter", abbrev: "m", rate: 1 },
+        { name: "kilometer", abbrev: "km", rate: 0.001 },
+      ],
+    },
+    {
+      name: "time",
+      factors: [
+        { name: "second", abbrev: "s", rate: 1 },
+        { name: "minute", abbrev: "min", rate: 1 / 60 },
+      ],
+    },
+  ];
+
   return (
     <div className="App">
       <Dimensions />
